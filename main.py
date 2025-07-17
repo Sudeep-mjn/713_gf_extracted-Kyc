@@ -14,7 +14,7 @@ def main():
     )
     
     st.title("📄 PDF Data Extraction & Form Filling Application")
-    st.markdown("Extract data from PDFs and automatically fill the editable PDF template with support for Nepali and English text.")
+    st.markdown("Extract data from PDFs and automatically fill the editable PDF template with support for and English text.")
     
     # Initialize session state
     if 'processed_files' not in st.session_state:
@@ -29,7 +29,7 @@ def main():
         3. **Download Results**: Download individual files or bulk download as ZIP
         
         **Template**: Uses EditablePdf.pdf as the default template
-        **Supported Languages**: Nepali and English text extraction
+        **Supported Languages**: English text extraction
         **File Naming**: Output files will be named as `original_filename_filled.pdf`
         """)
     
@@ -181,7 +181,7 @@ def main():
     
     # Footer
     st.markdown("---")
-    st.markdown("Built with ❤️ NIST | Supports Nepali and English text extraction")
+    st.markdown("Built with ❤️ using Streamlit | Supports Nepali and English text extraction")
 
 if __name__ == "__main__":
     main()
