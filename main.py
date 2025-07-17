@@ -181,7 +181,7 @@ def main():
     
     # Footer
     st.markdown("---")
-    st.markdown("Built with ❤️ using Streamlit | Supports Nepali and English text extraction")
+    st.markdown("Built with ❤️ NIST | Supports Nepali and English text extraction")
 
 if __name__ == "__main__":
     main()
