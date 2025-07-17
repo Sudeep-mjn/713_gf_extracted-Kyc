@@ -46,9 +46,9 @@ class DataParser:
                 r'PAN[:\s]*([A-Z0-9]{9,12})(?!\s*(?:ies|No|Number))',
                 r':yfoL n]vf g+=[:\s]*([A-Z0-9]{9,12})'
             ],
-            'issue_district': [
-                r'Issue\s+District\s+([A-Za-z\s]+?)(?=\s*(?:Issue Date|Beneficiary|$|\n))',
-                r'hf/L lhNnf[:\s]*([A-Za-z\s]+)'
+             'issue_district': [
+                r'Citizenship\s+Details[\s\S]{0,100}?Issue\s+District[:\s]*([A-Za-z\s]+?)(?=\s*(?:Issue\s+Date|Beneficiary|$|\n))',
+                r'Issue\s+District[:\s]*([A-Za-z\s]+?)(?=\s*(?:Issue\s+Date|Beneficiary|$|\n))'
             ],
             'issue_date': [
                 r'Issue Date\s+(\d{4}-\d{2}-\d{2})',
@@ -68,9 +68,9 @@ class DataParser:
                     r'Current\s+Address[:\s]*.*?Province[:\s]*([A-Za-z0-9_\s]+?)(?=\s*(?:District|Municipality|$|\n))',
                     r'(?:^|\n)(?!.*Permanent)(?!.*Temporary).*?Province[:\s]+([A-Za-z0-9_\s]+?)(?=\s*(?:District|Municipality|$|\n))',
                 ],
-                'district': [
-                    r'Current\s+Address[:\s]*.*?District[:\s]*([A-Za-z\s]+?)(?=\s*(?:Municipality|Ward|Tole|$|\n))',
-                    r'(?:^|\n)(?!.*Permanent)(?!.*Temporary).*?District[:\s]+([A-Za-z\s]+?)(?=\s*(?:Municipality|Ward|Tole|$|\n))',
+                 'district': [
+                    r'Current\s+Address[\s\S]{0,100}?District[:\s]*([A-Za-z\s]+?)(?=\s*(?:Municipality|Ward|Tole|$|\n))',
+                    r'\bCurrent\s+District[:\s]*([A-Za-z\s]+?)(?=\s*(?:Municipality|Ward|Tole|$|\n))'
                 ],
                 'municipality': [
                     r'Current\s+Address[:\s]*.*?Municipality[:\s]*([A-Za-z\s]+?)(?=\s*(?:Ward|Tole|$|\n))',
