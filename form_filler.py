@@ -71,12 +71,12 @@ class FormFiller:
             },
 
             #guardian details
-            'guardian_name': "Name/Surename",     #field needs to be updated...........................HERE.......................................
-            'guardian_relationship': "Relationship With Applicant",   #..........................Here.... (pdf name field)..........................
+            'guardian_name': "NameSurname  In Block letter",    
+            'guardian_relationship': "Relationship with applicant",  
             
             #Minor details
-            'minor_telephone': " ",  #___________fill pdf naming field ______________________
-            'minor_mobile': " ",   #___________fill pdf naming field ______________________
+            'minor_telephone': "Minor Telephone No",  
+            'minor_mobile': "Minor Mobile No",   
 
         }
 
