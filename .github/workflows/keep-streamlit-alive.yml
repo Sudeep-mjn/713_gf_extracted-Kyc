@@ -1,0 +1,16 @@
+name: Keep Streamlit App Awake
+
+on:
+  schedule:
+    - cron: '0 */18 * * *'  # Runs every 18 hours
+
+jobs:
+  wake-up:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Wake up Streamlit app
+        run: |
+          curl -s -o /dev/null -w "%{http_code}\n" https://fill-kyc.streamlit.app/
